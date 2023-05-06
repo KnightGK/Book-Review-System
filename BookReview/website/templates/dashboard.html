@@ -1,0 +1,59 @@
+{%extends 'base.html' %}
+
+{%block title %}home{% endblock%}
+{%block content%}
+{{ style_link(links='style_addbooks.css') }}
+<h3 style="display: flex; justify-content: center; padding: 40px 10% 15px 10%">Current Lending Status</h3>
+<div class="infos">
+    <table>
+        <tr>
+            <th>Book ID</th>
+            <th>Book Barcode</th>
+            <th>Start Time</th>
+            <th>Expire Time</th>
+            <th>Renew Allowance</th>
+            <th>Operator ID</th>
+            <th>Reader ID</th>
+        </tr>
+        {% for data in fetch %}
+        <tr>
+            <th>{{data.BBookID}}</th>
+            <th>{{data.BookBarcode}}</th>
+            <th>{{data.StartTime}}</th>
+            <th>{{data.ExpiryTime}}</th>
+            <th>{{data.RenewAllowance}}</th>
+            <th>{{data.OperatorID}}</th>
+            <th>{{data.ReaderID}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<h3 style="display: flex; justify-content: center; padding: 40px 10% 15px 10%">Catalog</h3>
+<div class="infos">
+    <table>
+        <tr>
+            <th>Book ID</th>
+            <th>Book Barcode</th>
+            <th>Start Time</th>
+            <th>Expire Time</th>
+            <th>Renew Allowance</th>
+            <th>Operator ID</th>
+            <th>Reader ID</th>
+        </tr>
+        {% for data in fetch %}
+        <tr>
+            <th>{{data.BBookID}}</th>
+            <th>{{data.BookBarcode}}</th>
+            <th>{{data.StartTime}}</th>
+            <th>{{data.ExpiryTime}}</th>
+            <th>{{data.RenewAllowance}}</th>
+            <th>{{data.OperatorID}}</th>
+            <th>{{data.ReaderID}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+{%block title %}home{% endblock%}
+{%block content%}
+{{ style_link(links='style_addusers.css') }}
+<body>
+    <div class='content'>
+        <form class="card" method="POST">
+            <div class="input">
+                <label class="input-label" for="BookBarcode">Book Barcode</label>
+                <input class="input-field" name="BookBarcode" id="BookBarcode">
+            </div>
+
+            <div class="input">
+                <label class="input-label" for="ExpiryTime">Expiration Date</label>
+                <input class="input-field"  type="date" name="ExpiryTime" id="ExpiryTime">
+            </div>
+
+            <div class="input">
+                <label class="input-label" for="OperatorID">Operator ID</label>
+                <input class="input-field"  name="OperatorID" id="OperatorID">
+            </div>
+
+            <div class="input-checkbox">
+                <label class="input-label-check">Want Renew?</label>
+                <input class="checkbox" value="True" name="RenewAllowance" type="checkbox">
+            </div>
+
+            <div class="action">
+                <button class="action-button" type="submit">Borrow</button>
+            </div>
+        </form>
+    </div>
+    <p style="display: flex; justify-content: center; padding: 5px 10% 0 10%">{{msg}}</p>
+    <h3 style="display: flex; justify-content: center; padding: 40px 10% 15px 10%">My Borrowed Info</h3>
+    <div class="infos">
+        <table>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Barcode</th>
+                <th>Start Time</th>
+                <th>Expiration Date</th>
+                <th>Renew Allowance</th>
+                <th>Operator ID</th>
+                <th>Reader ID</th>
+            </tr>
+            {% for data in fetch %}
+            <tr>
+                <th>{{data.BBookID}}</th>
+                <th>{{data.BookBarcode}}</th>
+                <th>{{data.StartTime}}</th>
+                <th>{{data.ExpiryTime}}</th>
+                <th>{{data.RenewAllowance}}</th>
+                <th>{{data.OperatorID}}</th>
+                <th>{{data.ReaderID}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+{%endblock%}

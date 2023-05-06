@@ -1,0 +1,110 @@
+
+.game-title  {
+  text-align: center;
+  font-family: Arial;
+  grid-column: 1 / -1;
+}
+
+
+.container  {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 200px 200px 200px 200px;
+  column-gap: 15px;
+  row-gap: 10px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+
+.card {
+  background-color: lightblue;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+.card:active  {
+  transform: scale(.97);
+  transition: transform  .2s;
+}
+.card.flip  {
+  transform: rotateY(180deg);
+}
+
+
+.back-face {
+  width: 200px;
+  height: 150px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 100;
+  
+}
+.front-face {
+  width:80px;
+  height:80px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 30px;
+}
+
+.text-overlay {
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  font-family: Arial;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(240, 135, 29);
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.text-overlay-bottom {
+  font-size: 0.4em;
+}
+
+.text-overlay.visible {
+  display: flex;
+  animation: pop-up 500ms forwards;
+}
+
+@keyframes pop-up {
+  from {
+    background-color: rgba(187, 93, 93, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(19, 59, 138, 0.8);
+    font-size: 11em;
+  }
+}

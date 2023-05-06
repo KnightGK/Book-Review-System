@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=divce-wdith, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styleMain.css')}}"
+    />
+  </head>
+
+  <body>
+    <div class="content">
+      <img src="{{url_for('static', filename='books.jpeg')}}" alt="book" />
+      <form method="POST">
+        <h3>Create Your Account</h3>
+        <!-- <div class="formElement">
+          <label for="id">ID</label>
+          <input
+            type="id"
+            class="form-control"
+            id="id"
+            name="id"
+            placeholder="Enter ID"
+          />
+        </div> -->
+
+        <div class="formElement">
+          <label for="id">ID</label>
+          <br>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            name="id"
+            placeholder="Enter ID (Larger than 1000)"
+          />
+        </div>
+
+        <div class="formElement">
+          <label for="name">Name</label>
+          <br>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Enter Name (3 - 20 characters)"
+          />
+        </div>
+
+        <div class="formElement">
+          <label for="password">Password</label>
+          <br>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter Password (8 - 50 characters)"
+          />
+        </div>
+
+        <div class="formElement">
+          <label for="passwordConfirm">Confirm Password</label>
+          <br>
+          <input
+            type="password"
+            class="form-control"
+            id="passwordConfirm"
+            name="passwordConfirm"
+            placeholder="Confirm Password"
+          />
+        </div>
+
+        <br />
+        <button class="form-control" type="submit">Sign up</button>
+        <p>{{msg}}</p>
+      </form>
+    </div>
+  </body>
+</html>

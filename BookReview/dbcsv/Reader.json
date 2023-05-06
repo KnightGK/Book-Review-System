@@ -1,0 +1,72 @@
+[
+  {
+    "ReaderID": 1,
+    "ReaderName": "Jenny",
+    "ReaderPassword": "J12345",
+    "Gender": "F",
+    "RegistrationDate": "2002-03-24"
+  },
+  {
+    "ReaderID": 2,
+    "ReaderName": "Jack",
+    "ReaderPassword": "Jack1",
+    "Gender": "M",
+    "RegistrationDate": "2022-03-25"
+  },
+  {
+    "ReaderID": 3,
+    "ReaderName": "Mary",
+    "ReaderPassword": "Mmmmm2",
+    "Gender": "F",
+    "RegistrationDate": "2022-03-26"
+  },
+  {
+    "ReaderID": 4,
+    "ReaderName": "Jackson",
+    "ReaderPassword": "JACk223",
+    "Gender": "M",
+    "RegistrationDate": "2022-03-27"
+  },
+  {
+    "ReaderID": 5,
+    "ReaderName": "Mike",
+    "ReaderPassword": "mike23333",
+    "Gender": "M",
+    "RegistrationDate": "2022-03-28"
+  },
+  {
+    "ReaderID": 6,
+    "ReaderName": "Mark",
+    "ReaderPassword": "m19990928",
+    "Gender": "M",
+    "RegistrationDate": "2022-03-29"
+  },
+  {
+    "ReaderID": 7,
+    "ReaderName": "Nancy",
+    "ReaderPassword": "NNNancy",
+    "Gender": "F",
+    "RegistrationDate": "2022-03-30"
+  },
+  {
+    "ReaderID": 8,
+    "ReaderName": "Roy",
+    "ReaderPassword": "r2001oy0627",
+    "Gender": "M",
+    "RegistrationDate": "2022-04-01"
+  },
+  {
+    "ReaderID": 9,
+    "ReaderName": "Robin",
+    "ReaderPassword": "R987654321",
+    "Gender": "M",
+    "RegistrationDate": "2022-04-02"
+  },
+  {
+    "ReaderID": 10,
+    "ReaderName": "Cathy",
+    "ReaderPassword": "cccloveu",
+    "Gender": "F",
+    "RegistrationDate": "2022-04-03"
+  }
+]
